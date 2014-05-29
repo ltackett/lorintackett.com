@@ -1,5 +1,26 @@
 ## Front-End Developer Portfolio of Lorin Tackett
 
+### May, 2014
+
+I decided to give Bootstrap a proper go. I've had a couple bad experiences with Bootstrap on client projects Even though I vastly prefer other grid/UI libraries, it is always good to get some perspective.
+
+
+This iteration of my portfolio was inspired in part by a Bootstrap expo piece: [Portfolio of Nick DiMatteo](http://expo.getbootstrap.com/2014/03/07/nick-dimatteo/). I liked the way each portfolio item had an accompanying background color.
+
+Most of my past portfolios have lacked texture, and I admit I'm not a huge fan of it myself. In spite of this, I chose to grab some free textures off of [DeviantArt](http://deviantart.com) and [WebTreats](http://backgrounds.mysitemyway.com/) to add a little more flavor to each slide. For each texture I made high-contrast grayscale versions, and keyed out the black or white, depending on which slide I intended to use it on. This way I can change the colors in the future, or re-use the patterns on other elements.
+
+If you want to explore this version of my portfolio, you will need to familiarize yourself with these libraries and languages:
+
+* `skrollr`
+* `jquery`
+* `bootstrap`
+* `middleman`
+* `haml`
+* `sass`
+* `coffeescript`
+
+---
+
 ### Open Source Software
 
 I started poking around with the internet in the 90s. It was a lot easier to learn by example back then. You could view the source code of a web page and most of the time it was pretty easy to read through it to see what does what.
