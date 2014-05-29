@@ -1,0 +1,222 @@
+@import url(http://fonts.googleapis.com/css?family=Lustria);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,300italic,400italic);
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400italic,400,700italic,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,300);
+
+// $primary-typeface: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $secondary-typeface: "Lustria", Georgia, Times, "Times New Roman", serif;
+
+$primary-typeface: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$secondary-typeface: "Droid Serif", Georgia, Times, "Times New Roman", serif;
+
+@import "compass";
+@import "breakpoint";
+@import "bootstrap";
+@import "bootstrap/theme";
+
+body {
+  font-family: $primary-typeface;
+  font-size: 160%;
+
+  &         { overflow: visible; }
+  &.loading { overflow: hidden; }
+
+  &         .slide { display: block; }
+  &.loading .slide { display: none; }
+
+  &         #loading { display: none; }
+  &.loading #loading { display: block; }
+}
+
+#main-navigation {
+  margin-bottom: 0;
+}
+
+#wrapper {
+  position: fixed;
+  top:      0;
+  right:    0;
+  bottom:   0;
+  left:     0;
+}
+
+.slide {
+  overflow: hidden;
+  position: absolute;
+  top:      100%;
+  right:    0;
+  bottom:   0;
+  left:     0;
+}
+
+#loading {
+  background: #900;
+  color:      #fff;
+  top:        0;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    margin-top: 40%;
+
+  }
+}
+
+#vitals {
+  background: #900;
+  top: 0;
+
+  &:before {
+    @include background-size(contain);
+    background-image:    image-url('silhouette.svg');
+    background-position: bottom center;
+    background-repeat:   no-repeat;
+
+    display: block;
+    content: '';
+
+    position: absolute;
+    top:      1em;
+    right:    1em;
+    bottom:   0;
+    left:     1em;
+  }
+
+  h1 { font-weight: 700; }
+
+  p { font-family: $secondary-typeface; }
+
+  .container { position: relative; }
+
+  .jumbotron {
+    position:      absolute;
+    top:           50%;
+    width:         100%;
+    margin-top:    -65px;
+    margin-bottom: 0;
+
+    background: transparent;
+    color:      #fff;
+    padding:    0;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    h1 { font-size: 4em; }
+
+    p, blockquote { font-size: 1em; }
+
+    blockquote {
+      margin-top: 30px;
+      padding: 0 20px;
+
+      @include breakpoint(max-width $screen-sm-min) {
+        border: none;
+        padding: 0;
+        margin: 0;
+
+        ul {
+          @include inline-list;
+
+          li            { margin-right: 1em; }
+          li:last-child { margin-right: 0; }
+        }
+      }
+    }
+  }
+
+}
+
+@mixin portfolio-colors($background, $foreground) {
+  background-color: $background;
+  color: $foreground;
+
+  .label {
+    background: rgba($foreground, 0.2);
+    color:      $foreground;
+  }
+}
+
+#portfolio {
+  .portfolio-item {
+    overflow: hidden;
+
+    .container {
+      position: relative;
+
+      .row {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    h2 { font-size: 1.85em; }
+
+    h3 {
+      text-transform: uppercase;
+      font-family: $secondary-typeface;
+      font-size: 1.15em;
+      margin: 6px 0 0;
+    }
+
+    p { font-size: 1em; }
+
+    p.tags {
+      line-height: 1.8em;
+
+      .tag {
+        font-weight: 400;
+      }
+    }
+
+    img {
+      @include box-shadow(rgba(#000, 0.7) 0 10px 40px);
+      width: 100%;
+      cursor: e-resize;
+
+      &         { display: none; }
+      &.active  { display: block; }
+    }
+
+    .item-details {
+      li { clear: both; }
+      h3 { float: left; }
+      p  { padding-left: 80px; }
+    }
+
+    &#relo      { background: image-url('pinstripe_1.png'); @include portfolio-colors(#1a2026, #cfdde5); }
+    &#ponga     { background: image-url('damask_1.png');    @include portfolio-colors(#2e2419, #e3dccf); }
+    &#el3       { background: image-url('squares_1.png');   @include portfolio-colors(#ff7009, #fffff3); }
+    &#lre       { background: image-url('damask_2.png');    @include portfolio-colors(#142a3c, #c3d0d8); }
+    &#decipher  { @include portfolio-colors(#c3d324, #333333); }
+  }
+}
+
+#about {
+  background: #efefef;
+  text-shadow: #fff 0 1px 0;
+
+  blockquote { border-color: #900; }
+
+  .container { position: relative; }
+
+  .quotes-container {
+    position: absolute;
+    top:      50%;
+    left:     2em;
+    right:    2em;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-left: 23px;
+    font-family: $secondary-typeface;
+  }
+
+  .quotes {
+    position: absolute;
+  }
+}

@@ -1,0 +1,220 @@
+---
+title: Front-End Developer Portfolio of Lorin Tackett
+---
+
+:ruby
+  vitals_start = 'top: 0%;    bottom: 0%;'
+  vitals_end   = 'top: -100%; bottom: 100%;'
+
+  jumbotron_start = 'top: 60%; '
+  jumbotron_end   = 'top: 20%;'
+
+  slide_in_start  = 'top: 100%;'
+  slide_in_end    = 'top: 0%;'
+  slide_out_start = 'top: 0%;    bottom: 0%;'
+  slide_out_end   = 'top: -100%; bottom: 100%;'
+  info_start      = 'transform:translate(-400px, -400px)  rotate(10deg);'
+  info_end        = 'transform:translate(0px,    0px)     rotate(0deg);'
+  gallery_start   = 'transform:translate(400px, -400px)   rotate(10deg);'
+  gallery_end     = 'transform:translate(0px,    0px)     rotate(0deg);'
+
+#loading.slide
+  %h1 Loading.
+
+#vitals.slide{ 'data-0' => vitals_start, 'data-1000' => vitals_end }
+  .container
+    .jumbotron{ 'data-0' => jumbotron_start, 'data-400' => jumbotron_end }
+      .row
+        .col-sm-7.col-md-6.col-lg-5.col-sm-offset-1.col-md-offset-2.col-lg-offset-3
+          %h1 Lorin Tackett
+          %p UX Designer, Front-End Developer, and the Oxford comma.
+
+        .col-sm-2.col-md-2
+          %blockquote
+            %ul.list-unstyled
+              %li= link_to "email", 'mailto: lorin.tackett@gmail.com'
+              %li= link_to "github", 'http://github.com/ltackett'
+              %li= link_to "twitter", 'http://twitter.com/ltackett'
+              %li= link_to "blog", 'http://browserwrangler.com'
+
+#portfolio
+  #relo.portfolio-item.slide{ 'data-0' => slide_in_start, 'data-1000' => slide_in_end, 'data-2000' => slide_out_start , 'data-3000' => slide_out_end }
+    .container
+      .row
+        .item-details.col-md-4{ 'data-0' => info_start, 'data-1000' => info_end }
+          %h2 RelocationOnline
+          %ul.list-unstyled
+            %li
+              %h3 Tech
+              %p.tags
+                %span.tag.label.label-default Rails
+                %span.tag.label.label-default Haml
+                %span.tag.label.label-default Sass
+                %span.tag.label.label-default Compass
+                %span.tag.label.label-default jQuery
+                %span.tag.label.label-default Mobile
+
+            %li
+              %h3 Roles
+              %p.tags
+                %span.tag.label.label-default Front-End Developer
+                %span.tag.label.label-default UX Consultant
+                %span.tag.label.label-default Designer
+
+          %p Industrial-strength web application for corporate relocation professionals. jQuery plugins. Custom modal library.
+
+        .gallery.col-md-8{ 'data-0' => gallery_start, 'data-1000' => gallery_end }
+          %img.active{ src: "images/portfolio/relo_1.png" }
+          %img{ src: "images/portfolio/relo_2.png" }
+          %img{ src: "images/portfolio/relo_3.png" }
+          %img{ src: "images/portfolio/relo_4.png" }
+
+  #ponga.portfolio-item.slide{ 'data-2000' => slide_in_start, 'data-3000' => slide_in_end, 'data-4000' => slide_out_start , 'data-5000' => slide_out_end }
+    .container
+      .row
+        .item-details.col-md-4{ 'data-2000' => info_start, 'data-3000' => info_end }
+          %h2 Ponga
+          %ul.list-unstyled
+            %li
+              %h3 Tech
+              %p.tags
+                %span.tag.label.label-default Rails
+                %span.tag.label.label-default Backbone
+                %span.tag.label.label-default Mustache
+                %span.tag.label.label-default Sass
+                %span.tag.label.label-default Compass
+
+            %li
+              %h3 Roles
+              %p.tags
+                %span.tag.label.label-default Front-End Developer
+
+          %p Annotate, comment, and share your high-res photos. Backbone. CSS3 animations.
+
+        .gallery.col-md-8{ 'data-2000' => gallery_start, 'data-3000' => gallery_end }
+          %img.active{ src: "images/portfolio/ponga_1.png" }
+          %img{ src: "images/portfolio/ponga_2.png" }
+          %img{ src: "images/portfolio/ponga_3.png" }
+          %img{ src: "images/portfolio/ponga_4.png" }
+          %img{ src: "images/portfolio/ponga_5.png" }
+
+  #el3.portfolio-item.slide{ 'data-4000' => slide_in_start, 'data-5000' => slide_in_end, 'data-6000' => slide_out_start , 'data-7000' => slide_out_end }
+    .container
+      .row
+        .item-details.col-md-4{ 'data-4000' => info_start, 'data-5000' => info_end }
+          %h2 Everloop
+          %ul.list-unstyled
+            %li
+              %h3 Tech
+              %p.tags
+                %span.tag.label.label-default Rails
+                %span.tag.label.label-default Haml
+                %span.tag.label.label-default Sass
+                %span.tag.label.label-default Compass
+
+            %li
+              %h3 Roles
+              %p.tags
+                %span.tag.label.label-default Front-End Developer
+
+          %p Social networking that's safe for kids. Monitored and secure. Games, instant messaging, and sponsored content.
+
+        .gallery.col-md-8{ 'data-4000' => gallery_start, 'data-5000' => gallery_end }
+          %img.active{ src: "images/portfolio/el3_1.png" }
+          %img{ src: "images/portfolio/el3_2.png" }
+          %img{ src: "images/portfolio/el3_3.png" }
+
+  #lre.portfolio-item.slide{ 'data-6000' => slide_in_start, 'data-7000' => slide_in_end, 'data-8000' => slide_out_start , 'data-9000' => slide_out_end }
+    .container
+      .row
+        .item-details.col-md-4{ 'data-6000' => info_start, 'data-7000' => info_end }
+          %h2 Luxury Real Estate
+          %ul.list-unstyled
+            %li
+              %h3 Tech
+              %p.tags
+                %span.tag.label.label-default Rails
+                %span.tag.label.label-default Haml
+                %span.tag.label.label-default Sass
+                %span.tag.label.label-default Compass
+
+            %li
+              %h3 Roles
+              %p.tags
+                %span.tag.label.label-default Front-End Developer
+
+          %p Are you in the market for a castle, or a private island? Extensive tools and services for real estate agencies.
+
+        .gallery.col-md-8{ 'data-6000' => gallery_start, 'data-7000' => gallery_end }
+          %img.active{ src: "images/portfolio/lre_1.png" }
+          %img{ src: "images/portfolio/lre_2.png" }
+          %img{ src: "images/portfolio/lre_3.png" }
+
+  #decipher.portfolio-item.slide{ 'data-8000' => slide_in_start, 'data-9000' => slide_in_end, 'data-10000' => slide_out_start , 'data-11000' => slide_out_end }
+    .container
+      .row
+        .item-details.col-md-4{ 'data-8000' => info_start, 'data-9000' => info_end }
+          %h2 Decipher
+          %ul.list-unstyled
+            %li
+              %h3 Tech
+              %p.tags
+                %span.tag.label.label-default Python
+                %span.tag.label.label-default MiddleMan
+                %span.tag.label.label-default Haml
+                %span.tag.label.label-default Sass
+                %span.tag.label.label-default Compass
+
+            %li
+              %h3 Roles
+              %p.tags
+                %span.tag.label.label-default Front-End Developer
+                %span.tag.label.label-default Designer
+
+          %p Market research and analytics. Created a jQuery-driven theme generator that emits CSS files.
+
+        .gallery.col-md-8{ 'data-8000' => gallery_start, 'data-9000' => gallery_end }
+          %img.active{ src: "images/portfolio/decipher_1.png" }
+          %img{ src: "images/portfolio/decipher_2.png" }
+          %img{ src: "images/portfolio/decipher_3.png" }
+          %img{ src: "images/portfolio/decipher_4.png" }
+
+#about.slide{ 'data-10000' => slide_in_start, 'data-11000' => slide_in_end}
+  .container
+    .quotes-container
+      %h2 Recommendations
+      .quotes{ 'data-11500' => 'opacity:1;', 'data-11600' => 'opacity:0;'  }
+        %blockquote
+          %p I frequently collaborate with Lorin on several Open Source Software Projects. He's a smart front-end engineer with an eye for both design and great markup and styles. He's eager to learn new technologies and to help create it as well. If you're looking for a forward thinker to take your website's front end to the next level, I think Lorin just might be your man.
+          %p– Chris Eppstein, Software Engineer at Linkedin.com, creator of the Compass framework
+
+        %blockquote
+          %p Lorin is a talented developer and great at managing complex client situations. Having both technical skill and insight into how to manage the human factor in projects is a rare and valuable combination.
+          %p – Ron Kornfeld, Principal Business Development at Amazon.com
+
+      .quotes{ 'data-11500' => 'opacity:0;', 'data-11600' => 'opacity:1;', 'data-12900' => 'opacity:1;', 'data-13000' => 'opacity:0;' }
+        %blockquote
+          %p Lorin is an extremely talented, productive, results-oriented developer who has the ability to get things done. He's serious about standards, has a clear aesthetic vision, and does a great job of translating vague, amorphous requirements into impressive deliverables. Always ready to tear into challenging projects, untangle messes, and get his hands dirty. Lorin rocks, he's always been the "go to" guy on our team, he's got my highest endorsement.
+          %p – Miles Ward, Director of Product Development at visibletechnologies.com
+
+        %blockquote
+          %p Lorin is a master at his ability to use the latest technologies to create deep dynamic web applications and websites.
+          %p As a master of front-end design, he takes his ability to design into the realm of functionality in timely manner.
+          %p Lorin has assisted me with multiple projects that allowed me to deliver to my clients on a timely manner. His ability to jump in to an existing project and fill in the technical blanks to complete the project is very impressive. I recommend his services to any company looking for help with new projects or existing projects.
+          %p – Brandon Hill, Owner of BMH Media, LLC
+
+
+
+      .quotes{ 'data-12900' => 'opacity:0;', 'data-13000' => 'opacity:1;' }
+        %blockquote
+          %p Lorin is the type of colleague everyone wants to work with: cheerful, detail oriented, thoughtful, accomplished and insightful. He consistently went the extra mile without being asked.
+          %p – Scott Rudolph, Director of Business Development at luxuryrealestate.com
+
+        %blockquote
+          %p I have actually worked with Lorin twice in my professional career, and both times were a pleasure. Most recently I contracted Lorin to do some free-lance web design for a project I didn't have time to complete myself. Lorin did a great job at taking ownership of the project with minimal direction from me. His web and graphic design skills were top notch, and his work was quick and responsive. Furthermore, he came in under the budget that he quoted me, while at the same time adding more functionality than we had originally agreed upon - a testament to his project management and technical skills.
+          %p Working with him was most enjoyable and I intend to use his services in the future if possible.
+          %p – Jerry Tindall, Technical Services at Visible Technologies
+
+        %blockquote
+          %p Lorin is bright and works hard. He is dedicated and works well with others. I would hire him again.
+          %p — Steve Teglovic, Founder and CEO at Digital Lifeboat
