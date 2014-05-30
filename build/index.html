@@ -2,21 +2,23 @@
 <html>
   <head>
     <meta charset='utf-8'>
+    <meta content='user-scalable=no, width=device-width, initial-scale=1' name='viewport'>
+    <meta content='yes' name='apple-mobile-web-app-capable'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <title>Front-End Developer Portfolio of Lorin Tackett</title>
     <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='index loading'>
     <div id='wrapper'>
-      <div class='slide' id='loading'>
+      <div id='loading'>
         <h1>Loading.</h1>
       </div>
-      <div class='slide' data-0='top: 0%;    bottom: 0%;' data-1000='top: -100%; bottom: 100%;' id='vitals'>
+      <div class='slide active' data-0='top: 0%;    bottom: 0%;' data-1000='top: -100%; bottom: 100%;' data-scroll-position='0' id='vitals'>
         <div class='container'>
           <div class='jumbotron' data-0='top: 60%; ' data-400='top: 20%;'>
             <div class='row'>
               <div class='col-sm-7 col-md-6 col-lg-5 col-sm-offset-1 col-md-offset-2 col-lg-offset-3'>
-                <h1>Lorin Tackett</h1>
+                <h1><a href="#relo">Lorin Tackett</a></h1>
                 <p>UX Designer, Front-End Developer, and the Oxford comma.</p>
               </div>
               <div class='col-sm-2 col-md-2'>
@@ -33,220 +35,212 @@
           </div>
         </div>
       </div>
-      <div id='portfolio'>
-        <div class='portfolio-item slide' data-0='top: 100%;' data-1000='top: 0%;' data-2000='top: 0%;    bottom: 0%;' data-3000='top: -100%; bottom: 100%;' id='relo'>
-          <div class='container'>
-            <div class='row'>
-              <div class='item-details col-md-4' data-0='transform:translate(-400px, -400px)  rotate(10deg);' data-1000='transform:translate(0px,    0px)     rotate(0deg);'>
-                <h2>RelocationOnline</h2>
-                <ul class='list-unstyled'>
-                  <li>
-                    <h3>Tech</h3>
-                    <p class='tags'>
-                      <span class='tag label label-default'>Rails</span>
-                      <span class='tag label label-default'>Haml</span>
-                      <span class='tag label label-default'>Sass</span>
-                      <span class='tag label label-default'>Compass</span>
-                      <span class='tag label label-default'>jQuery</span>
-                      <span class='tag label label-default'>Mobile</span>
-                    </p>
-                  </li>
-                  <li>
-                    <h3>Roles</h3>
-                    <p class='tags'>
-                      <span class='tag label label-default'>Front-End Developer</span>
-                      <span class='tag label label-default'>UX Consultant</span>
-                      <span class='tag label label-default'>Designer</span>
-                    </p>
-                  </li>
-                </ul>
-                <p>Industrial-strength web application for corporate relocation professionals. jQuery plugins. Custom modal library.</p>
-              </div>
-              <div class='gallery col-md-8' data-0='transform:translate(400px, -400px)   rotate(10deg);' data-1000='transform:translate(0px,    0px)     rotate(0deg);'>
-                <img class='active' src='images/portfolio/relo_1.png'>
-                <img src='images/portfolio/relo_2.png'>
-                <img src='images/portfolio/relo_3.png'>
-                <img src='images/portfolio/relo_4.png'>
-              </div>
+      <div class='portfolio-item slide' data-0='top: 100%;' data-1000='top: 0%;    bottom: 0%;' data-2000='top: -100%; bottom: 100%;' data-scroll-position='1000' id='relo'>
+        <div class='container'>
+          <div class='row'>
+            <div class='item-details col-md-4' data-0='transform:translate(-400px, -400px)  rotate(10deg);' data-1000='transform:translate(0px,    0px)     rotate(0deg);'>
+              <h2>RelocationOnline</h2>
+              <ul class='list-unstyled'>
+                <li>
+                  <h3>Tech</h3>
+                  <p class='tags'>
+                    <span class='tag label label-default'>Rails</span>
+                    <span class='tag label label-default'>Haml</span>
+                    <span class='tag label label-default'>Sass</span>
+                    <span class='tag label label-default'>Compass</span>
+                    <span class='tag label label-default'>jQuery</span>
+                    <span class='tag label label-default'>Mobile</span>
+                  </p>
+                </li>
+                <li>
+                  <h3>Roles</h3>
+                  <p class='tags'>
+                    <span class='tag label label-default'>Front-End Developer</span>
+                    <span class='tag label label-default'>UX Consultant</span>
+                    <span class='tag label label-default'>Designer</span>
+                  </p>
+                </li>
+              </ul>
+              <p>Industrial-strength web application for corporate relocation professionals. jQuery plugins. Custom modal library.</p>
             </div>
-          </div>
-        </div>
-        <div class='portfolio-item slide' data-2000='top: 100%;' data-3000='top: 0%;' data-4000='top: 0%;    bottom: 0%;' data-5000='top: -100%; bottom: 100%;' id='ponga'>
-          <div class='container'>
-            <div class='row'>
-              <div class='item-details col-md-4' data-2000='transform:translate(-400px, -400px)  rotate(10deg);' data-3000='transform:translate(0px,    0px)     rotate(0deg);'>
-                <h2>Ponga</h2>
-                <ul class='list-unstyled'>
-                  <li>
-                    <h3>Tech</h3>
-                    <p class='tags'>
-                      <span class='tag label label-default'>Rails</span>
-                      <span class='tag label label-default'>Backbone</span>
-                      <span class='tag label label-default'>Mustache</span>
-                      <span class='tag label label-default'>Sass</span>
-                      <span class='tag label label-default'>Compass</span>
-                    </p>
-                  </li>
-                  <li>
-                    <h3>Roles</h3>
-                    <p class='tags'>
-                      <span class='tag label label-default'>Front-End Developer</span>
-                    </p>
-                  </li>
-                </ul>
-                <p>Annotate, comment, and share your high-res photos. Backbone. CSS3 animations.</p>
-              </div>
-              <div class='gallery col-md-8' data-2000='transform:translate(400px, -400px)   rotate(10deg);' data-3000='transform:translate(0px,    0px)     rotate(0deg);'>
-                <img class='active' src='images/portfolio/ponga_1.png'>
-                <img src='images/portfolio/ponga_2.png'>
-                <img src='images/portfolio/ponga_3.png'>
-                <img src='images/portfolio/ponga_4.png'>
-                <img src='images/portfolio/ponga_5.png'>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='portfolio-item slide' data-4000='top: 100%;' data-5000='top: 0%;' data-6000='top: 0%;    bottom: 0%;' data-7000='top: -100%; bottom: 100%;' id='el3'>
-          <div class='container'>
-            <div class='row'>
-              <div class='item-details col-md-4' data-4000='transform:translate(-400px, -400px)  rotate(10deg);' data-5000='transform:translate(0px,    0px)     rotate(0deg);'>
-                <h2>Everloop</h2>
-                <ul class='list-unstyled'>
-                  <li>
-                    <h3>Tech</h3>
-                    <p class='tags'>
-                      <span class='tag label label-default'>Rails</span>
-                      <span class='tag label label-default'>Haml</span>
-                      <span class='tag label label-default'>Sass</span>
-                      <span class='tag label label-default'>Compass</span>
-                    </p>
-                  </li>
-                  <li>
-                    <h3>Roles</h3>
-                    <p class='tags'>
-                      <span class='tag label label-default'>Front-End Developer</span>
-                    </p>
-                  </li>
-                </ul>
-                <p>Social networking that's safe for kids. Monitored and secure. Games, instant messaging, and sponsored content.</p>
-              </div>
-              <div class='gallery col-md-8' data-4000='transform:translate(400px, -400px)   rotate(10deg);' data-5000='transform:translate(0px,    0px)     rotate(0deg);'>
-                <img class='active' src='images/portfolio/el3_1.png'>
-                <img src='images/portfolio/el3_2.png'>
-                <img src='images/portfolio/el3_3.png'>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='portfolio-item slide' data-6000='top: 100%;' data-7000='top: 0%;' data-8000='top: 0%;    bottom: 0%;' data-9000='top: -100%; bottom: 100%;' id='lre'>
-          <div class='container'>
-            <div class='row'>
-              <div class='item-details col-md-4' data-6000='transform:translate(-400px, -400px)  rotate(10deg);' data-7000='transform:translate(0px,    0px)     rotate(0deg);'>
-                <h2>Luxury Real Estate</h2>
-                <ul class='list-unstyled'>
-                  <li>
-                    <h3>Tech</h3>
-                    <p class='tags'>
-                      <span class='tag label label-default'>Rails</span>
-                      <span class='tag label label-default'>Haml</span>
-                      <span class='tag label label-default'>Sass</span>
-                      <span class='tag label label-default'>Compass</span>
-                    </p>
-                  </li>
-                  <li>
-                    <h3>Roles</h3>
-                    <p class='tags'>
-                      <span class='tag label label-default'>Front-End Developer</span>
-                    </p>
-                  </li>
-                </ul>
-                <p>Are you in the market for a castle, or a private island? Extensive tools and services for real estate agencies.</p>
-              </div>
-              <div class='gallery col-md-8' data-6000='transform:translate(400px, -400px)   rotate(10deg);' data-7000='transform:translate(0px,    0px)     rotate(0deg);'>
-                <img class='active' src='images/portfolio/lre_1.png'>
-                <img src='images/portfolio/lre_2.png'>
-                <img src='images/portfolio/lre_3.png'>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='portfolio-item slide' data-10000='top: 0%;    bottom: 0%;' data-11000='top: -100%; bottom: 100%;' data-8000='top: 100%;' data-9000='top: 0%;' id='decipher'>
-          <div class='container'>
-            <div class='row'>
-              <div class='item-details col-md-4' data-8000='transform:translate(-400px, -400px)  rotate(10deg);' data-9000='transform:translate(0px,    0px)     rotate(0deg);'>
-                <h2>Decipher</h2>
-                <ul class='list-unstyled'>
-                  <li>
-                    <h3>Tech</h3>
-                    <p class='tags'>
-                      <span class='tag label label-default'>Python</span>
-                      <span class='tag label label-default'>MiddleMan</span>
-                      <span class='tag label label-default'>Haml</span>
-                      <span class='tag label label-default'>Sass</span>
-                      <span class='tag label label-default'>Compass</span>
-                    </p>
-                  </li>
-                  <li>
-                    <h3>Roles</h3>
-                    <p class='tags'>
-                      <span class='tag label label-default'>Front-End Developer</span>
-                      <span class='tag label label-default'>Designer</span>
-                    </p>
-                  </li>
-                </ul>
-                <p>Market research and analytics. Created a jQuery-driven theme generator that emits CSS files.</p>
-              </div>
-              <div class='gallery col-md-8' data-8000='transform:translate(400px, -400px)   rotate(10deg);' data-9000='transform:translate(0px,    0px)     rotate(0deg);'>
-                <img class='active' src='images/portfolio/decipher_1.png'>
-                <img src='images/portfolio/decipher_2.png'>
-                <img src='images/portfolio/decipher_3.png'>
-                <img src='images/portfolio/decipher_4.png'>
-              </div>
+            <div class='gallery col-md-8' data-0='transform:translate(400px, -400px)   rotate(10deg);' data-1000='transform:translate(0px,    0px)     rotate(0deg);'>
+              <img class='active' src='images/portfolio/relo_1.png'>
+              <img src='images/portfolio/relo_2.png'>
+              <img src='images/portfolio/relo_3.png'>
+              <img src='images/portfolio/relo_4.png'>
             </div>
           </div>
         </div>
       </div>
-      <div class='slide' data-10000='top: 100%;' data-11000='top: 0%;' id='about'>
+      <div class='portfolio-item slide' data-1000='top: 100%;' data-2000='top: 0%;    bottom: 0%;' data-3000='top: -100%; bottom: 100%;' data-scroll-position='2000' id='ponga'>
+        <div class='container'>
+          <div class='row'>
+            <div class='item-details col-md-4' data-1000='transform:translate(-400px, -400px)  rotate(10deg);' data-2000='transform:translate(0px,    0px)     rotate(0deg);'>
+              <h2>Ponga</h2>
+              <ul class='list-unstyled'>
+                <li>
+                  <h3>Tech</h3>
+                  <p class='tags'>
+                    <span class='tag label label-default'>Rails</span>
+                    <span class='tag label label-default'>Backbone</span>
+                    <span class='tag label label-default'>Mustache</span>
+                    <span class='tag label label-default'>Sass</span>
+                    <span class='tag label label-default'>Compass</span>
+                  </p>
+                </li>
+                <li>
+                  <h3>Roles</h3>
+                  <p class='tags'>
+                    <span class='tag label label-default'>Front-End Developer</span>
+                  </p>
+                </li>
+              </ul>
+              <p>Annotate, comment, and share your high-res photos. Backbone. CSS3 animations.</p>
+            </div>
+            <div class='gallery col-md-8' data-1000='transform:translate(400px, -400px)   rotate(10deg);' data-2000='transform:translate(0px,    0px)     rotate(0deg);'>
+              <img class='active' src='images/portfolio/ponga_1.png'>
+              <img src='images/portfolio/ponga_2.png'>
+              <img src='images/portfolio/ponga_3.png'>
+              <img src='images/portfolio/ponga_4.png'>
+              <img src='images/portfolio/ponga_5.png'>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='portfolio-item slide' data-2000='top: 100%;' data-3000='top: 0%;    bottom: 0%;' data-4000='top: -100%; bottom: 100%;' data-scroll-position='3000' id='el3'>
+        <div class='container'>
+          <div class='row'>
+            <div class='item-details col-md-4' data-2000='transform:translate(-400px, -400px)  rotate(10deg);' data-3000='transform:translate(0px,    0px)     rotate(0deg);'>
+              <h2>Everloop</h2>
+              <ul class='list-unstyled'>
+                <li>
+                  <h3>Tech</h3>
+                  <p class='tags'>
+                    <span class='tag label label-default'>Rails</span>
+                    <span class='tag label label-default'>Haml</span>
+                    <span class='tag label label-default'>Sass</span>
+                    <span class='tag label label-default'>Compass</span>
+                  </p>
+                </li>
+                <li>
+                  <h3>Roles</h3>
+                  <p class='tags'>
+                    <span class='tag label label-default'>Front-End Developer</span>
+                  </p>
+                </li>
+              </ul>
+              <p>Social networking that's safe for kids. Monitored and secure. Games, instant messaging, and sponsored content.</p>
+            </div>
+            <div class='gallery col-md-8' data-2000='transform:translate(400px, -400px)   rotate(10deg);' data-3000='transform:translate(0px,    0px)     rotate(0deg);'>
+              <img class='active' src='images/portfolio/el3_1.png'>
+              <img src='images/portfolio/el3_2.png'>
+              <img src='images/portfolio/el3_3.png'>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='portfolio-item slide' data-3000='top: 100%;' data-4000='top: 0%;    bottom: 0%;' data-5000='top: -100%; bottom: 100%;' data-scroll-position='4000' id='lre'>
+        <div class='container'>
+          <div class='row'>
+            <div class='item-details col-md-4' data-3000='transform:translate(-400px, -400px)  rotate(10deg);' data-4000='transform:translate(0px,    0px)     rotate(0deg);'>
+              <h2>Luxury Real Estate</h2>
+              <ul class='list-unstyled'>
+                <li>
+                  <h3>Tech</h3>
+                  <p class='tags'>
+                    <span class='tag label label-default'>Rails</span>
+                    <span class='tag label label-default'>Haml</span>
+                    <span class='tag label label-default'>Sass</span>
+                    <span class='tag label label-default'>Compass</span>
+                  </p>
+                </li>
+                <li>
+                  <h3>Roles</h3>
+                  <p class='tags'>
+                    <span class='tag label label-default'>Front-End Developer</span>
+                  </p>
+                </li>
+              </ul>
+              <p>Are you in the market for a castle, or a private island? Extensive tools and services for real estate agencies.</p>
+            </div>
+            <div class='gallery col-md-8' data-3000='transform:translate(400px, -400px)   rotate(10deg);' data-4000='transform:translate(0px,    0px)     rotate(0deg);'>
+              <img class='active' src='images/portfolio/lre_1.png'>
+              <img src='images/portfolio/lre_2.png'>
+              <img src='images/portfolio/lre_3.png'>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='portfolio-item slide' data-4000='top: 100%;' data-5000='top: 0%;    bottom: 0%;' data-6000='top: -100%; bottom: 100%;' data-scroll-position='5000' id='decipher'>
+        <div class='container'>
+          <div class='row'>
+            <div class='item-details col-md-4' data-4000='transform:translate(-400px, -400px)  rotate(10deg);' data-5000='transform:translate(0px,    0px)     rotate(0deg);'>
+              <h2>Decipher</h2>
+              <ul class='list-unstyled'>
+                <li>
+                  <h3>Tech</h3>
+                  <p class='tags'>
+                    <span class='tag label label-default'>Python</span>
+                    <span class='tag label label-default'>MiddleMan</span>
+                    <span class='tag label label-default'>Haml</span>
+                    <span class='tag label label-default'>Sass</span>
+                    <span class='tag label label-default'>Compass</span>
+                  </p>
+                </li>
+                <li>
+                  <h3>Roles</h3>
+                  <p class='tags'>
+                    <span class='tag label label-default'>Front-End Developer</span>
+                    <span class='tag label label-default'>Designer</span>
+                  </p>
+                </li>
+              </ul>
+              <p>Market research and analytics. Created a jQuery-driven theme generator that emits CSS files.</p>
+            </div>
+            <div class='gallery col-md-8' data-4000='transform:translate(400px, -400px)   rotate(10deg);' data-5000='transform:translate(0px,    0px)     rotate(0deg);'>
+              <img class='active' src='images/portfolio/decipher_1.png'>
+              <img src='images/portfolio/decipher_2.png'>
+              <img src='images/portfolio/decipher_3.png'>
+              <img src='images/portfolio/decipher_4.png'>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='slide' data-5000='top: 100%;' data-6000='top: 0%;' data-scroll-position='6000' id='about'>
         <div class='container'>
           <div class='quotes-container'>
             <h2>Recommendations</h2>
-            <div class='quotes' data-11500='opacity:1;' data-11600='opacity:0;'>
-              <blockquote>
-                <p>I frequently collaborate with Lorin on several Open Source Software Projects. He's a smart front-end engineer with an eye for both design and great markup and styles. He's eager to learn new technologies and to help create it as well. If you're looking for a forward thinker to take your website's front end to the next level, I think Lorin just might be your man.</p>
-                <p>– Chris Eppstein, Software Engineer at Linkedin.com, creator of the Compass framework</p>
-              </blockquote>
-              <blockquote>
-                <p>Lorin is a talented developer and great at managing complex client situations. Having both technical skill and insight into how to manage the human factor in projects is a rare and valuable combination.</p>
-                <p>– Ron Kornfeld, Principal Business Development at Amazon.com</p>
-              </blockquote>
-            </div>
-            <div class='quotes' data-11500='opacity:0;' data-11600='opacity:1;' data-12900='opacity:1;' data-13000='opacity:0;'>
-              <blockquote>
-                <p>Lorin is an extremely talented, productive, results-oriented developer who has the ability to get things done. He's serious about standards, has a clear aesthetic vision, and does a great job of translating vague, amorphous requirements into impressive deliverables. Always ready to tear into challenging projects, untangle messes, and get his hands dirty. Lorin rocks, he's always been the "go to" guy on our team, he's got my highest endorsement.</p>
-                <p>– Miles Ward, Director of Product Development at visibletechnologies.com</p>
-              </blockquote>
-              <blockquote>
-                <p>Lorin is a master at his ability to use the latest technologies to create deep dynamic web applications and websites.</p>
-                <p>As a master of front-end design, he takes his ability to design into the realm of functionality in timely manner.</p>
-                <p>Lorin has assisted me with multiple projects that allowed me to deliver to my clients on a timely manner. His ability to jump in to an existing project and fill in the technical blanks to complete the project is very impressive. I recommend his services to any company looking for help with new projects or existing projects.</p>
-                <p>– Brandon Hill, Owner of BMH Media, LLC</p>
-              </blockquote>
-            </div>
-            <div class='quotes' data-12900='opacity:0;' data-13000='opacity:1;'>
-              <blockquote>
-                <p>Lorin is the type of colleague everyone wants to work with: cheerful, detail oriented, thoughtful, accomplished and insightful. He consistently went the extra mile without being asked.</p>
-                <p>– Scott Rudolph, Director of Business Development at luxuryrealestate.com</p>
-              </blockquote>
-              <blockquote>
-                <p>I have actually worked with Lorin twice in my professional career, and both times were a pleasure. Most recently I contracted Lorin to do some free-lance web design for a project I didn't have time to complete myself. Lorin did a great job at taking ownership of the project with minimal direction from me. His web and graphic design skills were top notch, and his work was quick and responsive. Furthermore, he came in under the budget that he quoted me, while at the same time adding more functionality than we had originally agreed upon - a testament to his project management and technical skills.</p>
-                <p>Working with him was most enjoyable and I intend to use his services in the future if possible.</p>
-                <p>– Jerry Tindall, Technical Services at Visible Technologies</p>
-              </blockquote>
-              <blockquote>
-                <p>Lorin is bright and works hard. He is dedicated and works well with others. I would hire him again.</p>
-                <p>— Steve Teglovic, Founder and CEO at Digital Lifeboat</p>
-              </blockquote>
-            </div>
+            <blockquote data-11900='opacity:1;' data-12000='opacity:0;'>
+              <p>I frequently collaborate with Lorin on several Open Source Software Projects. He's a smart front-end engineer with an eye for both design and great markup and styles. He's eager to learn new technologies and to help create it as well. If you're looking for a forward thinker to take your website's front end to the next level, I think Lorin just might be your man.</p>
+              <p>– Chris Eppstein, creator of the Compass framework, Software Engineer at Linkedin.com</p>
+            </blockquote>
+            <blockquote data-11900='opacity:0;' data-12000='opacity:1;' data-12900='opacity:1;' data-13000='opacity:0;'>
+              <p>Lorin is a talented developer and great at managing complex client situations. Having both technical skill and insight into how to manage the human factor in projects is a rare and valuable combination.</p>
+              <p>– Ron Kornfeld, Head of EU Business Development at Amazon.com</p>
+            </blockquote>
+            <blockquote data-12900='opacity:0;' data-13000='opacity:1;' data-13900='opacity:1;' data-14000='opacity:0;'>
+              <p>Lorin is an extremely talented, productive, results-oriented developer who has the ability to get things done. He's serious about standards, has a clear aesthetic vision, and does a great job of translating vague, amorphous requirements into impressive deliverables. Always ready to tear into challenging projects, untangle messes, and get his hands dirty. Lorin rocks, he's got my highest endorsement.</p>
+              <p>– Miles Ward, Global Head of Solutions Evangelism at Google</p>
+            </blockquote>
+            <blockquote data-13900='opacity:0;' data-14000='opacity:1;' data-14900='opacity:1;' data-15000='opacity:0;'>
+              <p>Lorin is the type of colleague everyone wants to work with: cheerful, detail oriented, thoughtful, accomplished and insightful. He consistently went the extra mile without being asked.</p>
+              <p>– Scott Rudolph, Director of Business Development at luxuryrealestate.com</p>
+            </blockquote>
+            <blockquote data-14900='opacity:0;' data-15000='opacity:1;' data-15900='opacity:1;' data-16000='opacity:0;'>
+              <p>Lorin is a master at his ability to use the latest technologies to create deep dynamic web applications and websites.</p>
+              <p>As a master of front-end design, he takes his ability to design into the realm of functionality in timely manner.</p>
+              <p>Lorin has assisted me with multiple projects that allowed me to deliver to my clients on a timely manner. His ability to jump in to an existing project and fill in the technical blanks to complete the project is very impressive. I recommend his services to any company looking for help with new projects or existing projects.</p>
+              <p>– Brandon Hill, Owner of BMH Media, LLC</p>
+            </blockquote>
+            <blockquote data-15900='opacity:0;' data-16000='opacity:1;' data-16900='opacity:1;' data-17000='opacity:0;'>
+              <p>I have actually worked with Lorin twice in my professional career, and both times were a pleasure. Most recently I contracted Lorin to do some free-lance web design for a project I didn't have time to complete myself. Lorin did a great job at taking ownership of the project with minimal direction from me. His web and graphic design skills were top notch, and his work was quick and responsive. Furthermore, he came in under the budget that he quoted me, while at the same time adding more functionality than we had originally agreed upon - a testament to his project management and technical skills.</p>
+              <p>Working with him was most enjoyable and I intend to use his services in the future if possible.</p>
+              <p>– Jerry Tindall, Technical Services at Visible Technologies</p>
+            </blockquote>
+            <blockquote data-16900='opacity:0;' data-17000='opacity:1;'>
+              <p>Lorin is bright and works hard. He is dedicated and works well with others. I would hire him again.</p>
+              <p>— Steve Teglovic, Founder and CEO at Digital Lifeboat</p>
+            </blockquote>
           </div>
         </div>
       </div>

@@ -6639,33 +6639,41 @@ button.close {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1); }
 
 /* line 18, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+html, body {
+  overflow: hidden; }
+
+/* line 20, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
 body {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 160%; }
-  /* line 22, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  @media (max-width: 768px) {
+    /* line 20, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    body {
+      font-size: 120%; } }
+  /* line 26, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   body {
     overflow: visible; }
-  /* line 23, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 27, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   body.loading {
     overflow: hidden; }
-  /* line 25, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 29, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   body .slide {
     display: block; }
-  /* line 26, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 30, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   body.loading .slide {
     display: none; }
-  /* line 28, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 32, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   body #loading {
     display: none; }
-  /* line 29, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 33, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   body.loading #loading {
     display: block; }
 
-/* line 32, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+/* line 36, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
 #main-navigation {
   margin-bottom: 0; }
 
-/* line 36, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+/* line 40, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
 #wrapper {
   position: fixed;
   top: 0;
@@ -6673,7 +6681,7 @@ body {
   bottom: 0;
   left: 0; }
 
-/* line 44, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+/* line 48, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
 .slide {
   overflow: hidden;
   position: absolute;
@@ -6682,22 +6690,28 @@ body {
   bottom: 0;
   left: 0; }
 
-/* line 53, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+/* line 57, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
 #loading {
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: #900;
   color: #fff;
   top: 0;
   text-align: center; }
-  /* line 59, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 69, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   #loading h1 {
     margin: 0;
     margin-top: 40%; }
 
-/* line 66, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+/* line 76, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
 #vitals {
   background: #900;
   top: 0; }
-  /* line 70, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 80, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   #vitals:before {
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -6713,16 +6727,16 @@ body {
     right: 1em;
     bottom: 0;
     left: 1em; }
-  /* line 86, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 96, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   #vitals h1 {
     font-weight: 700; }
-  /* line 88, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 98, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   #vitals p {
     font-family: "Droid Serif", Georgia, Times, "Times New Roman", serif; }
-  /* line 90, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 100, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   #vitals .container {
     position: relative; }
-  /* line 92, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 102, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   #vitals .jumbotron {
     position: absolute;
     top: 50%;
@@ -6732,27 +6746,27 @@ body {
     background: transparent;
     color: #fff;
     padding: 0; }
-    /* line 103, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    /* line 113, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
     #vitals .jumbotron a {
       color: #fff;
       text-decoration: none; }
-    /* line 108, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    /* line 118, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
     #vitals .jumbotron h1 {
       font-size: 4em; }
-    /* line 110, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    /* line 120, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
     #vitals .jumbotron p, #vitals .jumbotron blockquote {
       font-size: 1em; }
-    /* line 112, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    /* line 122, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
     #vitals .jumbotron blockquote {
       margin-top: 30px;
       padding: 0 20px; }
       @media (max-width: 768px) {
-        /* line 112, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+        /* line 122, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
         #vitals .jumbotron blockquote {
           border: none;
           padding: 0;
           margin: 0; }
-          /* line 121, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+          /* line 131, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
           #vitals .jumbotron blockquote ul {
             list-style-type: none; }
             /* line 5, /Users/ltackett/.rvm/gems/ruby-2.0.0-p451@portfolio_2014/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/lists/_inline-list.scss */
@@ -6760,128 +6774,141 @@ body {
               margin: 0px;
               padding: 0px;
               display: inline; }
-            /* line 124, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+            /* line 134, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
             #vitals .jumbotron blockquote ul li {
               margin-right: 1em; }
-            /* line 125, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+            /* line 135, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
             #vitals .jumbotron blockquote ul li:last-child {
               margin-right: 0; } }
 
-/* line 144, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-#portfolio .portfolio-item {
+/* line 152, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+.portfolio-item {
   overflow: hidden; }
-  /* line 147, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item .container {
+  /* line 155, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item .container {
     position: relative; }
-    /* line 150, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-    #portfolio .portfolio-item .container .row {
+    /* line 158, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    .portfolio-item .container .row {
       position: absolute;
       bottom: 0; }
-  /* line 156, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item h2 {
+  /* line 164, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item h2 {
     font-size: 1.85em; }
-  /* line 158, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item h3 {
+  /* line 166, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item h3 {
     text-transform: uppercase;
     font-family: "Droid Serif", Georgia, Times, "Times New Roman", serif;
     font-size: 1.15em;
     margin: 6px 0 0; }
-  /* line 165, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item p {
+  /* line 173, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item p {
     font-size: 1em; }
-  /* line 167, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item p.tags {
-    line-height: 1.8em; }
-    /* line 170, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-    #portfolio .portfolio-item p.tags .tag {
-      font-weight: 400; }
   /* line 175, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item img {
+  .portfolio-item p.tags {
+    line-height: 1.8em; }
+    /* line 178, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    .portfolio-item p.tags .tag {
+      font-weight: 400; }
+  /* line 183, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item img {
     -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 10px 40px;
     box-shadow: rgba(0, 0, 0, 0.7) 0 10px 40px;
     width: 100%;
     cursor: e-resize; }
-    /* line 180, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-    #portfolio .portfolio-item img {
+    /* line 188, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    .portfolio-item img {
       display: none; }
-    /* line 181, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-    #portfolio .portfolio-item img.active {
+    /* line 189, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    .portfolio-item img.active {
       display: block; }
-  /* line 185, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item .item-details li {
+  /* line 193, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item .item-details li {
     clear: both; }
-  /* line 186, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item .item-details h3 {
+  /* line 194, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item .item-details h3 {
     float: left; }
-  /* line 187, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item .item-details p {
+  /* line 195, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item .item-details p {
     padding-left: 80px; }
-  /* line 190, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item#relo {
+  /* line 198, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item#relo {
     background: url("/images/pinstripe_1.png");
     background-color: #1a2026;
     color: #cfdde5; }
-    /* line 137, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-    #portfolio .portfolio-item#relo .label {
+    /* line 146, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    .portfolio-item#relo .label {
       background: rgba(207, 221, 229, 0.2);
       color: #cfdde5; }
-  /* line 191, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item#ponga {
+  /* line 199, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item#ponga {
     background: url("/images/damask_1.png");
     background-color: #2e2419;
     color: #e3dccf; }
-    /* line 137, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-    #portfolio .portfolio-item#ponga .label {
+    /* line 146, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    .portfolio-item#ponga .label {
       background: rgba(227, 220, 207, 0.2);
       color: #e3dccf; }
-  /* line 192, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item#el3 {
+  /* line 200, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item#el3 {
     background: url("/images/squares_1.png");
     background-color: #ff7009;
     color: #fffff3; }
-    /* line 137, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-    #portfolio .portfolio-item#el3 .label {
+    /* line 146, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    .portfolio-item#el3 .label {
       background: rgba(255, 255, 243, 0.2);
       color: #fffff3; }
-  /* line 193, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item#lre {
+  /* line 201, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item#lre {
     background: url("/images/damask_2.png");
     background-color: #142a3c;
     color: #c3d0d8; }
-    /* line 137, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-    #portfolio .portfolio-item#lre .label {
+    /* line 146, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    .portfolio-item#lre .label {
       background: rgba(195, 208, 216, 0.2);
       color: #c3d0d8; }
-  /* line 194, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #portfolio .portfolio-item#decipher {
+  /* line 202, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  .portfolio-item#decipher {
     background-color: #c3d324;
     color: #333333; }
-    /* line 137, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-    #portfolio .portfolio-item#decipher .label {
+    /* line 146, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    .portfolio-item#decipher .label {
       background: rgba(51, 51, 51, 0.2);
       color: #333333; }
 
-/* line 198, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+/* line 205, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
 #about {
-  background: #efefef;
+  background: #eee;
   text-shadow: #fff 0 1px 0; }
-  /* line 202, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 210, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  #about h2 {
+    font-size: 2em; }
+  /* line 211, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  #about p {
+    font-size: 1em; }
+  @media (max-width: 768px) {
+    /* line 215, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    #about h2 {
+      font-size: 1,2em; }
+    /* line 216, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+    #about p {
+      font-size: 0.6em; } }
+  /* line 219, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   #about blockquote {
     border-color: #900; }
-  /* line 204, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 221, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   #about .container {
     position: relative; }
-  /* line 206, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 223, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   #about .quotes-container {
     position: absolute;
-    top: 50%;
+    top: 40px;
     left: 2em;
     right: 2em; }
-  /* line 213, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  /* line 230, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
   #about h2 {
     margin-top: 0;
     margin-left: 23px;
     font-family: "Droid Serif", Georgia, Times, "Times New Roman", serif; }
-  /* line 219, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
-  #about .quotes {
+  /* line 236, /Volumes/Slow_Jam/Users/ltackett/projects/lorintackett/lorintackett.com/source/stylesheets/application.css.scss */
+  #about blockquote {
     position: absolute; }
