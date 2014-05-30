@@ -15,9 +15,13 @@ $secondary-typeface: "Droid Serif", Georgia, Times, "Times New Roman", serif;
 @import "bootstrap";
 @import "bootstrap/theme";
 
+html, body { overflow: hidden; }
+
 body {
   font-family: $primary-typeface;
   font-size: 160%;
+
+  @include breakpoint(max-width $screen-sm-min) { font-size: 120%; }
 
   &         { overflow: visible; }
   &.loading { overflow: hidden; }
@@ -51,6 +55,12 @@ body {
 }
 
 #loading {
+  overflow:   hidden;
+  position:   absolute;
+  top:        100%;
+  right:      0;
+  bottom:     0;
+  left:       0;
   background: #900;
   color:      #fff;
   top:        0;
@@ -127,7 +137,6 @@ body {
       }
     }
   }
-
 }
 
 @mixin portfolio-colors($background, $foreground) {
@@ -140,64 +149,72 @@ body {
   }
 }
 
-#portfolio {
-  .portfolio-item {
-    overflow: hidden;
+.portfolio-item {
+  overflow: hidden;
 
-    .container {
-      position: relative;
+  .container {
+    position: relative;
 
-      .row {
-        position: absolute;
-        bottom: 0;
-      }
+    .row {
+      position: absolute;
+      bottom: 0;
     }
-
-    h2 { font-size: 1.85em; }
-
-    h3 {
-      text-transform: uppercase;
-      font-family: $secondary-typeface;
-      font-size: 1.15em;
-      margin: 6px 0 0;
-    }
-
-    p { font-size: 1em; }
-
-    p.tags {
-      line-height: 1.8em;
-
-      .tag {
-        font-weight: 400;
-      }
-    }
-
-    img {
-      @include box-shadow(rgba(#000, 0.7) 0 10px 40px);
-      width: 100%;
-      cursor: e-resize;
-
-      &         { display: none; }
-      &.active  { display: block; }
-    }
-
-    .item-details {
-      li { clear: both; }
-      h3 { float: left; }
-      p  { padding-left: 80px; }
-    }
-
-    &#relo      { background: image-url('pinstripe_1.png'); @include portfolio-colors(#1a2026, #cfdde5); }
-    &#ponga     { background: image-url('damask_1.png');    @include portfolio-colors(#2e2419, #e3dccf); }
-    &#el3       { background: image-url('squares_1.png');   @include portfolio-colors(#ff7009, #fffff3); }
-    &#lre       { background: image-url('damask_2.png');    @include portfolio-colors(#142a3c, #c3d0d8); }
-    &#decipher  { @include portfolio-colors(#c3d324, #333333); }
   }
+
+  h2 { font-size: 1.85em; }
+
+  h3 {
+    text-transform: uppercase;
+    font-family: $secondary-typeface;
+    font-size: 1.15em;
+    margin: 6px 0 0;
+  }
+
+  p { font-size: 1em; }
+
+  p.tags {
+    line-height: 1.8em;
+
+    .tag {
+      font-weight: 400;
+    }
+  }
+
+  img {
+    @include box-shadow(rgba(#000, 0.7) 0 10px 40px);
+    width: 100%;
+    cursor: e-resize;
+
+    &         { display: none; }
+    &.active  { display: block; }
+  }
+
+  .item-details {
+    li { clear: both; }
+    h3 { float: left; }
+    p  { padding-left: 80px; }
+  }
+
+  &#relo      { background: image-url('pinstripe_1.png'); @include portfolio-colors(#1a2026, #cfdde5); }
+  &#ponga     { background: image-url('damask_1.png');    @include portfolio-colors(#2e2419, #e3dccf); }
+  &#el3       { background: image-url('squares_1.png');   @include portfolio-colors(#ff7009, #fffff3); }
+  &#lre       { background: image-url('damask_2.png');    @include portfolio-colors(#142a3c, #c3d0d8); }
+  &#decipher  { @include portfolio-colors(#c3d324, #333333); }
 }
 
 #about {
-  background: #efefef;
+  background: #eee;
   text-shadow: #fff 0 1px 0;
+
+  & {
+    h2 { font-size: 2em; }
+    p  { font-size: 1em; }
+  }
+
+  @include breakpoint(max-width $screen-sm-min) {
+    h2 { font-size: 1,2em; }
+    p  { font-size: 0.6em; }
+  }
 
   blockquote { border-color: #900; }
 
@@ -205,18 +222,16 @@ body {
 
   .quotes-container {
     position: absolute;
-    top:      50%;
+    top:      40px;
     left:     2em;
     right:    2em;
   }
 
   h2 {
-    margin-top: 0;
+    margin-top:  0;
     margin-left: 23px;
     font-family: $secondary-typeface;
   }
 
-  .quotes {
-    position: absolute;
-  }
+  blockquote { position: absolute; }
 }
