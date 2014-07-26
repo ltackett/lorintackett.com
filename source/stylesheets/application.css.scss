@@ -26,8 +26,8 @@ body {
   &         { overflow: visible; }
   &.loading { overflow: hidden; }
 
-  &         .slide { display: block; }
-  &.loading .slide { display: none; }
+  &         .pane { display: block; }
+  &.loading .pane { display: none; }
 
   &         #loading { display: none; }
   &.loading #loading { display: block; }
@@ -45,7 +45,7 @@ body {
   left:     0;
 }
 
-.slide {
+.pane {
   overflow: hidden;
   position: absolute;
   top:      100%;
@@ -69,7 +69,6 @@ body {
   h1 {
     margin: 0;
     margin-top: 40%;
-
   }
 }
 
@@ -202,9 +201,17 @@ body {
   &#decipher  { @include portfolio-colors(#c3d324, #333333); }
 }
 
-#about {
-  background: #eee;
+.text {
+  background:  #eee;
   text-shadow: #fff 0 1px 0;
+  padding-top: 70px;
+
+  .label { text-shadow: none; }
+
+  h2 {
+    margin-top:  0;
+    font-family: $secondary-typeface;
+  }
 
   & {
     h2 { font-size: 2em; }
@@ -212,26 +219,36 @@ body {
   }
 
   @include breakpoint(max-width $screen-sm-min) {
-    h2 { font-size: 1,2em; }
+    h2 { font-size: 1.2em; }
+    p  { font-size: 0.8em; }
+  }
+}
+
+#about {
+  img {
+    float: left;
+    margin-right: 1em;
+    margin-top: 0.25em;
+
+    & { width: 50%; }
+  }
+}
+
+#recommendations {
+  p  { font-size: 1em; }
+
+  @include breakpoint(max-width $screen-sm-min) {
     p  { font-size: 0.6em; }
   }
 
-  blockquote { border-color: #900; }
-
-  .container { position: relative; }
+  .container  { position: relative; }
+  blockquote  { position: absolute; border-color: #900; }
+  h2          { margin-left: 23px; }
 
   .quotes-container {
     position: absolute;
-    top:      40px;
+    top:      0;
     left:     2em;
     right:    2em;
   }
-
-  h2 {
-    margin-top:  0;
-    margin-left: 23px;
-    font-family: $secondary-typeface;
-  }
-
-  blockquote { position: absolute; }
 }

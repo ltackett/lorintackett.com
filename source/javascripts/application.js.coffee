@@ -5,9 +5,14 @@
 #= require bootstrap
 #= require_self
 
+# Initialize Skrollr
 s = skrollr.init()
 
 do ($ = jQuery, window, document) ->
+
+  # External links should open externally
+  # ============================================================================
+  $('a[rel="external"]').attr('target', '_blank');
 
   # Resize slides and loading screen
   # ============================================================================
@@ -42,34 +47,19 @@ do ($ = jQuery, window, document) ->
   # ============================================================================
   slideIndex = 1
   setSlide = (direction) ->
-    $slides       = $('.slide')
-    $currentSlide = $slides.filter('.active')
+    $slides        = $('.slide')
+    $currentSlide  = $slides.filter('.active')
+    $incomingSlide = $currentSlide
+    sl             = $slides.length
 
-    # We are scrolling up. Setup previous slide.
+    # Setup slide direction.
     # ============================================================================
-    if direction == 'prev'
-      slideIndex-- # subtract from index
+    if direction == 'prev' then slideIndex-- # We are scrolling up. Subtract from index
+    if direction == 'next' then slideIndex++ # We are scrolling down. Add to index
 
-      # We are at the first slide.
-      # Return current slide and reset slideIndex.
-      if slideIndex < 1
-        $incomingSlide = $currentSlide
-        slideIndex = 1
-      else
-        $incomingSlide = $currentSlide.prev('.slide')
-
-    # We are scrolling up. Setup next slide.
-    # ============================================================================
-    if direction == 'next'
-      slideIndex++ # add to index
-
-      # We are at the last slide.
-      # Return current slide and reset slideIndex.
-      if slideIndex > $slides.length
-        $incomingSlide = $currentSlide
-        slideIndex = $slides.length
-      else
-        $incomingSlide = $currentSlide.next('.slide')
+    if      slideIndex < 1   then slideIndex = 1      # First slide? Reset slideIndex to start position.
+    else if slideIndex > sl  then slideIndex = sl     # Last slide? Reset slideIndex to end position.
+    else    $incomingSlide = $($slides[slideIndex-1]) # Otherwise, set incoming slide to slideIndex
 
     # Class names dance
     $slides.removeClass('active')

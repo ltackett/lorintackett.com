@@ -1,14 +1,16 @@
-%nav#main-navigation.navbar.navbar-inverse.navbar-fixed-top{role: "navigation"}
+%nav#main-navigation.navbar.navbar-inverse.navbar-fixed-top{ role: "navigation", "data-0" => 'top: -51px;', "data-1000" => 'top: 0px;' }
   .container
     -# Brand and toggle get grouped for better mobile display
     .navbar-header
-      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
+      %button.navbar-toggle{"data-target" => "#collapsing-menu", "data-toggle" => "collapse", type: "button"}
         %span.sr-only Toggle navigation
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
     -# Collect the nav links, forms, and other content for toggling
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        %li= link_to 'Portfoloio', '#portfolio'
-        %li= link_to 'About', '#about'
+    #collapsing-menu.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li= link_to "email",   'mailto: lorin.tackett@gmail.com',  rel: 'external'
+        %li= link_to "github",  'http://github.com/ltackett',       rel: 'external'
+        %li= link_to "twitter", 'http://twitter.com/ltackett',      rel: 'external'
+        %li= link_to "blog",    'http://browserwrangler.com',       rel: 'external'
