@@ -14,11 +14,12 @@
 //= require jquery_ujs
 //= require handlebars
 //= require ember
-
-//= require_tree ./templates
+//= require ember-data
+//= require ember-animated-outlet
 //= require_self
+//= require app
 
-window.ltackett = Ember.Application.create({
+window.App = Ember.Application.create({
   LOG_TRANSITIONS: true,
   LOG_BINDINGS: true,
   LOG_VIEW_LOOKUPS: true,
@@ -26,5 +27,23 @@ window.ltackett = Ember.Application.create({
   LOG_VERSION: true,
 
   debugMode:   true,
-  rootElement: '#ltackett'
+  rootElement: '#ltackett-portfolio-august-2014'
+});
+
+
+// This is provided by http://refills.bourbon.io
+// ============================================================================
+$(document).ready(function() {
+  var menu = $('#navigation-menu');
+  var menuToggle = $('#js-mobile-menu');
+  var signUp = $('.sign-up');
+
+  $(menuToggle).on('click', function(e) {
+    e.preventDefault();
+    menu.slideToggle(function(){
+      if(menu.is(':hidden')) {
+        menu.removeAttr('style');
+      }
+    });
+  });
 });

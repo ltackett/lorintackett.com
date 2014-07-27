@@ -1,0 +1,18 @@
+<header class="navigation">
+  <div class="navigation-wrapper">
+    {{#link-to 'index' class="logo"}}
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
+    {{/link-to}}
+    <a href="" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <div class="nav">
+      <ul id="navigation-menu">
+        <li class="nav-link">{{#link-to-animated 'portfolio_items' animations="main:fade"}}Portfolio{{/link-to-animated}}</li>
+        <li class="nav-link">{{#link-to-animated 'about'           animations="main:fade"}}About{{/link-to-animated}}</li>
+        <li class="nav-link">{{#link-to-animated 'recommendations' animations="main:fade"}}Recommendations{{/link-to-animated}}</li>
+      </ul>
+    </div>
+    <div class="navigation-tools">
+      <a href="javascript:void(0)" class="sign-up">Contact</a>
+    </div>
+  </div>
+</header>

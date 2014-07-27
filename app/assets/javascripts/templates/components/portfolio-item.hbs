@@ -1,0 +1,14 @@
+<div class="inner">
+  <div class="content">
+    <h1>{{item.title}}</h1>
+    <p>{{item.description}}</p>
+
+    <div class="badges">
+      {{#each skill in item.skills}}
+        <span class="badge">{{skill.title}}</span>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="image"><img {{bind-attr src="item.featured_image" alt="item.title"}}></div>
+</div>

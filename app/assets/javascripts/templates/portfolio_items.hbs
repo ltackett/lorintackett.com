@@ -1,0 +1,9 @@
+<div id="portfolio">
+  <ul class="portfolio-items">
+    {{#each item in controller}}
+      {{portfolio-item item=item}}
+    {{else}}
+      {{portfolio-item title="Sorry" description="No posts found"}}
+    {{/each}}
+  </ul>
+</div>
