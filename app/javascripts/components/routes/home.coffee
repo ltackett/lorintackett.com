@@ -26,8 +26,19 @@ module.exports = (context) ->
           </dl>
           <p>
             Need a front-end developer?
-            <a href="http://resume.lorintackett.com">I am available for limited projects.</a>
+            <a href="http://resume.lorintackett.com">I have limited availability for short-term projects.</a>
           </p>
+        </section>
+
+        <section className="portfolio">
+          <h2>Recent Work:</h2>
+          <ul>
+            <li><a href="http://artik.io"             target="_blank"><img src="images/artik.png"  height="50" /></a></li>
+            <li><a href="http://vuhaus.com"           target="_blank"><img src="images/vuhaus.png" height="50" /></a></li>
+            <li><a href="http://ponga.com"            target="_blank"><img src="images/ponga.png"  height="50" /></a></li>
+            <li><a href="http://relocationonline.com" target="_blank"><img src="images/relo.png"  height="50" /></a></li>
+            <li><a href="http://musictocodeto.com"    target="_blank"><img src="images/mtct.png"  height="50" /></a></li>
+          </ul>
         </section>
 
         <div className="clouds">
