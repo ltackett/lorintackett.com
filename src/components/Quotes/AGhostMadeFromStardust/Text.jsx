@@ -21,6 +21,7 @@ const StyledQuote = styled.div`
   position: absolute;
   top: 350px;
   left: 50%;
+  z-index: 1;
 
   h1 {
     ${textStyle}
