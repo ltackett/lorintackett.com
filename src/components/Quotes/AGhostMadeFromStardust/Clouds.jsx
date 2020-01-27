@@ -74,7 +74,7 @@ export const Clouds = () => {
     return () => window.removeEventListener('resize', resizeClouds)
   }, [])
 
-  // Array of layers dara
+  // Array of layers data
   const layers = [
     { image: img1, width: 1000, height: 509, velocity: 0.25, x: 100 },
     { image: img2, width: 1000, height: 447, velocity: 0.50, x: 500 },
