@@ -44,7 +44,6 @@ const textStyle = css`
 const Arrow = styled.span`
   ${textStyle}
   font-size: 2.5em;
-  /* transform: translate(-50%, 0); */
   position: absolute;
   bottom: 1em;
   left: 50%;
