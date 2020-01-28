@@ -3,15 +3,11 @@ import styled from 'styled-components'
 
 /**
  * CloudsContainer
- * Styled component for dimensions and multi-gradient background
+ * Styled component for dimensions
  */
 const CloudsContainer = styled.div`
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(transparent, 70%, #000),
-              radial-gradient(at 50% 0%, transparent, 70%, #000),
-              radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.6), 20%, transparent, 70%, transparent),
-              linear-gradient(#302d27, #000);
 `
 
 /**
@@ -19,21 +15,11 @@ const CloudsContainer = styled.div`
  * Styled component to reduce opacity of clouds
  */
 const CloudsCanvas = styled.canvas`
-  opacity: 0.4;
+  opacity: ${props => props.opacity ? props.opacity : 0.4};
 `
 
 // Init vars
 let canvas, c
-
-// Init images
-const img1 = new Image()
-const img2 = new Image()
-const img3 = new Image()
-
-// Load images
-img1.src = "/images/clouds_white_2.png"
-img2.src = "/images/clouds_black_1.png"
-img3.src = "/images/clouds_white_3.png"
 
 /**
  * Clouds
@@ -42,7 +28,24 @@ img3.src = "/images/clouds_white_3.png"
  *   2. Starts an animation loop
  *   3. Moves the cloud layers by sub-pixel velocity on each animation tick
  */
-export const Clouds = () => {
+export const Clouds = (props) => {
+  const layers = []
+  
+  props.layers.forEach(layer => {
+    // Init and start loading images from src
+    const img = new Image()
+    img.src = layer.src
+
+    // Push new img to layerImgs array for consumption in the animation loop
+    layers.push({
+      ...layer,
+      image: img,
+      velocity: layer.velocity*props.speed
+    })
+  })
+
+  console.log({ layers })
+
   // Create a ref for the clouds
   const cloudsRef = React.useRef(null)
   
@@ -73,13 +76,6 @@ export const Clouds = () => {
     window.addEventListener('resize', resizeClouds)
     return () => window.removeEventListener('resize', resizeClouds)
   }, [])
-
-  // Array of layers data
-  const layers = [
-    { image: img1, width: 1000, height: 509, velocity: 0.25, x: 100 },
-    { image: img2, width: 1000, height: 447, velocity: 0.50, x: 500 },
-    { image: img3, width: 1579, height: 341, velocity: 1.00, x: 200 }
-  ]
   
   // Recursive function that handles animation
   const animateClouds = () => {
@@ -88,9 +84,13 @@ export const Clouds = () => {
 
     // Render the frame layers
     layers.forEach((layer) => {
+      if (layer.opacity) { c.globalAlpha = layer.opacity }
+
       c.drawImage(layer.image, (layer.width*0)-layer.x, 0, layer.width, layer.height)
       c.drawImage(layer.image, (layer.width*1)-layer.x, 0, layer.width, layer.height)
       c.drawImage(layer.image, (layer.width*2)-layer.x, 0, layer.width, layer.height)
+      
+      if (layer.opacity) { c.globalAlpha = 1 }
 
       // Recalculate position for next frame, or reset if out of bounds
       if (layer.x + layer.velocity > layer.width) {
@@ -106,7 +106,7 @@ export const Clouds = () => {
 
   return (
     <CloudsContainer>
-      <CloudsCanvas ref={cloudsRef} />
+      <CloudsCanvas ref={cloudsRef} opacity={props.opacity} />
     </CloudsContainer>
   )
 }

@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import { RandomQuotes } from './components/RandomQuotes';
 import { Intro } from './components/Intro';
+import { StormySkies } from './components/Themes';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -15,7 +16,9 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <RandomQuotes />
+      <StormySkies>
+        <RandomQuotes />
+      </StormySkies>
       <Intro />
     </>
   );
