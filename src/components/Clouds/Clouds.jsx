@@ -44,8 +44,6 @@ export const Clouds = (props) => {
     })
   })
 
-  console.log({ layers })
-
   // Create a ref for the clouds
   const cloudsRef = React.useRef(null)
   

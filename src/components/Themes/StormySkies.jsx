@@ -90,7 +90,7 @@ export const StormySkies = (props) => {
   const cloudLayers = [
     { src: '/images/clouds_white_2.png', width: 1000, height: 509, velocity: 0.25, x: 100 },
     { src: '/images/clouds_black_1.png', width: 1000, height: 447, velocity: 0.50, x: 500 },
-    { src: '/images/clouds_white_3.png', width: 1579, height: 341, velocity: 1.00, x: 200 }
+    { src: '/images/clouds_white_3.png', width: 1579, height: 341, velocity: 0.75, x: 200 }
   ]
 
   return (
@@ -100,7 +100,7 @@ export const StormySkies = (props) => {
       <GlobalStyles />
       <Layout>
         {props.children}
-        <Clouds layers={cloudLayers} speed={1} />
+        <Clouds layers={cloudLayers} speed={0.5} />
         <Arrow>&#129123;</Arrow>
       </Layout>
     </>
