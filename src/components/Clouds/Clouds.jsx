@@ -6,6 +6,8 @@ import styled from 'styled-components'
  * Styled component for dimensions
  */
 const CloudsContainer = styled.div`
+  position: absolute;
+  top: 0;
   height: 100vh;
   width: 100vw;
 `
@@ -15,7 +17,7 @@ const CloudsContainer = styled.div`
  * Styled component to reduce opacity of clouds
  */
 const CloudsCanvas = styled.canvas`
-  opacity: ${props => props.opacity ? props.opacity : 0.4};
+  opacity: ${props => props.opacity ? props.opacity : 0.3};
 `
 
 // Init vars

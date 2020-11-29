@@ -15,6 +15,10 @@ const StyledQuote = styled.div`
   h1 {
     font-family: 'Oswald', sans-serif;
   }
+
+  span {
+    display: block;
+  }
 `
 
 export const AGhostMadeFromStardust = ({ children }) => {

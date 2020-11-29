@@ -1,9 +1,13 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
 
+import { createGlobalStyle } from 'styled-components';
+import { BrowserRouter as Router } from 'react-router-dom'
+
+import { AppContext } from './App.Context';
 import { RandomQuotes } from './components/RandomQuotes';
-import { Intro } from './components/Intro';
+import { IMakeStuff } from './components/IMakeStuff';
 import { StormySkies } from './components/Themes';
+import { InstagramPost } from './components/InstagramPost';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -13,13 +17,19 @@ const GlobalStyle = createGlobalStyle`
 `
 
 function App() {
+  const [currentInstagramPost, setCurrentInstagramPost] = React.useState(undefined)
   return (
     <>
       <GlobalStyle />
-      <StormySkies>
-        <RandomQuotes />
-      </StormySkies>
-      <Intro />
+      <Router>
+        <AppContext.Provider value={{ currentInstagramPost, setCurrentInstagramPost }}>
+          <StormySkies>
+            <RandomQuotes />
+          </StormySkies>
+          <IMakeStuff />
+          <InstagramPost />
+        </AppContext.Provider>
+      </Router>
     </>
   );
 }

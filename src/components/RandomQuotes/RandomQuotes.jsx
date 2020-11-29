@@ -1,10 +1,12 @@
 import React from 'react'
 
-import { AGhostMadeFromStardust } from './AGhostMadeFromStardust'
+// import { AGhostMadeFromStardust } from './AGhostMadeFromStardust'
+import { DontJust } from './DontJust'
 
 // Put components into array, to be called later
 const quotes = [
-  AGhostMadeFromStardust
+  DontJust,
+  // AGhostMadeFromStardust
 ]
 
 export const RandomQuotes = () => {

@@ -1,0 +1,1 @@
+export { InstagramPost } from './InstagramPost'

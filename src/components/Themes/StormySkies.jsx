@@ -1,15 +1,21 @@
 import React from 'react'
 import styled, { createGlobalStyle, keyframes, css } from 'styled-components'
 
-import { Clouds } from '../Clouds/'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
+import { Clouds } from '../Clouds/'
+import { device } from '../../responsive';
+
+const thumpBig = 1.25;
+const thumpSmall = 1.1
 const bounce = keyframes`
   from {
     transform: scale3d(1, 1, 1);
   }
 
   10% {
-    transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(${thumpBig}, ${thumpBig}, ${thumpBig});
   }
 
   20% {
@@ -21,7 +27,7 @@ const bounce = keyframes`
   }
 
   40% {
-    transform: scale3d(1.06, 1.06, 1.06);
+    transform: scale3d(${thumpSmall}, ${thumpSmall}, ${thumpSmall});
   }
 
   55% {
@@ -34,8 +40,8 @@ const textStyle = css`
   text-decoration: none;
   white-space: nowrap;
   font-weight: normal;
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: 2em;
+  line-height: 1.25;
   margin: 0;
   text-shadow: 0 -1px 0  #ffffff,
                0 2px 3px #000000;
@@ -45,10 +51,12 @@ const Arrow = styled.span`
   ${textStyle}
   font-size: 2.5em;
   position: absolute;
-  bottom: 1em;
   left: 50%;
   margin-left: -0.5em;
   animation: 1s ${bounce} infinite;
+
+  bottom: 4em;
+  @media ${device.min.tablet} { bottom: 1em; }
 `
 
 const GlobalStyles = createGlobalStyle`
@@ -72,18 +80,22 @@ const Layout = styled.div`
   width: 100vw;
   background: linear-gradient(transparent, 70%, #000),
               radial-gradient(at 50% 0%, transparent, 70%, #000),
-              radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.6), 20%, transparent, 70%, transparent),
+              radial-gradient(circle at 50% -20%, rgba(255, 249, 237, 1), 20%, transparent, 40%, transparent),
               linear-gradient(#302d27, #000);
-
-  h1 {
+  
+  h2 {
     ${textStyle}
+
+    font-size: 1em;
+    @media ${device.min.mobileM} { font-size: 1.25em; }
+    @media ${device.min.mobileL} { font-size: 1.5em; }
+    @media ${device.min.tablet}  { font-size: 2em; }
+    
   }
 
   p {
     font-size: 0.75em;
   }
-
-  span { display: block; }
 `
 
 export const StormySkies = (props) => {
@@ -101,7 +113,7 @@ export const StormySkies = (props) => {
       <Layout>
         {props.children}
         <Clouds layers={cloudLayers} speed={0.5} />
-        <Arrow>&#129123;</Arrow>
+        <Arrow><FontAwesomeIcon icon={faArrowDown} /></Arrow>
       </Layout>
     </>
   )
