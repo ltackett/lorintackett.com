@@ -8,7 +8,7 @@ These days it's a lot harder. The landscape of developer options a lot more satu
 
 The goal of this repository is to make it easier to find and read through the code that powers my personal website and past versions that have been hosted at lorintackett.com over the years.
 
-    Copyright 2006-2020 Lorin Tackett
+    Copyright 2006-2021 Lorin Tackett
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
