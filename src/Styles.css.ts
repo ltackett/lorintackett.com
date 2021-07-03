@@ -4,6 +4,7 @@ export const GlobalStyles = createGlobalStyle`
   html, body {
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 
     .visually-hidden {
       border: 0;

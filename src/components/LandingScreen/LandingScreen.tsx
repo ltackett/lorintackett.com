@@ -1,8 +1,16 @@
 import * as React from 'react';
+import styled from 'styled-components';
 
 import { CloudLayer } from '../Clouds/Clouds.types'
 import { Clouds } from '../Clouds'
 import { Signature } from '../Signature'
+import { Fourfolio } from '../Fourfolio';
+
+const LandingScreenContainer = styled.div`
+  min-height: 100vh;
+  background: #000;
+  color: #efefef;
+`
 
 export const LandingScreen = () => {
   const cloudLayers: CloudLayer[] = [
@@ -12,9 +20,10 @@ export const LandingScreen = () => {
   ];
 
   return (
-    <>
+    <LandingScreenContainer>
       <Clouds layers={cloudLayers} speed={0.5} />
       <Signature />
-    </>
+      <Fourfolio />
+    </LandingScreenContainer>
   )
 }

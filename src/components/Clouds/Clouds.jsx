@@ -1,60 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
 
-/**
- * CloudsContainer
- * Styled component for dimensions
- */
-const CloudsContainer = styled.div`
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(transparent 700px, #111 1000px),
-              radial-gradient(circle at 50% -300px, transparent 300px, #111 1500px),
-              radial-gradient(circle at 50% -300px, rgba(255, 255, 255, 0.6), 400px, transparent, 1800px, transparent),
-              linear-gradient(#302d27 500px, #111 1000px);
-`
+import { AppContext } from '../../contexts/appContext'
 
-/**
- * CloudsCanvas
- * Styled component to reduce opacity of clouds
- */
-const CloudsCanvas = styled.canvas`
-  opacity: ${props => props.opacity ? props.opacity : 0.4};
-  position: absolute;
-`
-
-/**
- * Trees
- */
-const Trees = styled.div`
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 100vh;
-  width: 3000px;
-  background: url(/images/trees.png) no-repeat top center, linear-gradient(transparent 1190px, #000 1195px);
-  transform: translate(-50%, 0);
-
-  &:before, &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 3000px;
-    height: 100%;
-    background: black;
-  }
-
-  &:before {
-    left: -100%;
-  }
-
-  &:after {
-    right: -100%;
-  }
-`
+import { CloudsContainer, CloudsCanvas, Trees } from './Clouds.styles'
 
 // Init vars
 let canvas, c
@@ -67,6 +15,7 @@ let canvas, c
  *   3. Moves the cloud layers by sub-pixel velocity on each animation tick
  */
 export const Clouds = (props) => {
+  const appContext = React.useContext(AppContext);
   const layers = []
 
   props.layers.forEach(layer => {
@@ -103,7 +52,6 @@ export const Clouds = (props) => {
   const resizeClouds = () => {
     if (cloudsRef.current) {
       cloudsRef.current.width = window.innerWidth
-      cloudsRef.current.height = window.innerHeight
     }
   }
 
@@ -112,6 +60,8 @@ export const Clouds = (props) => {
     window.addEventListener('resize', resizeClouds)
     return () => window.removeEventListener('resize', resizeClouds)
   }, [])
+  
+  console.log('appContext.isPortraitMode', appContext.isPortraitMode)
 
   // Recursive function that handles animation
   const animateClouds = () => {
@@ -143,9 +93,9 @@ export const Clouds = (props) => {
   }
 
   return (
-    <CloudsContainer>
-      <CloudsCanvas ref={cloudsRef} opacity={props.opacity} />
-      <Trees />
+    <CloudsContainer isPortraitMode={appContext.isPortraitMode}>
+      <CloudsCanvas height={700} ref={cloudsRef} opacity={props.opacity} isPortraitMode={appContext.isPortraitMode} />
+      <Trees isPortraitMode={appContext.isPortraitMode} />
     </CloudsContainer>
   )
 }
