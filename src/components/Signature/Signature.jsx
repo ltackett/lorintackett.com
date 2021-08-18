@@ -3,7 +3,7 @@ import * as React from 'react';
 import { SignatureContainer, Logo } from './Signature.styles';
 
 export const Signature = () => {
-  const videoRef = React.useRef<HTMLVideoElement>(null);
+  const videoRef = React.useRef(null);
 
   return (
     <SignatureContainer>

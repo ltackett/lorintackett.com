@@ -1,34 +1,69 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const FourfolioContainer = styled.div`
+export const FourfolioContainer = styled.nav`
   width: 700px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 2em;
 
+  ${props => props.align && props.align === 'left' && css`
+    margin-left: 0;
+  `}
+
+  ${props => props.align && props.align === 'right' && css`
+    margin-right: 0;
+  `}
+
+  ${props => props.inline && css`
+    margin: 0;
+  `}
+
+  ${props => props.mini && css`
+    width: 300px;
+    grid-gap: 1em;
+  `}
+
+  ${props => props.animated && css`
+    &.fadeIn-start {
+      opacity: 0;
+    }
+
+    &.fadeIn-end {
+      opacity: 1;
+      transition: opacity 10s ease;
+    }
+  `}
+
   a {
     position: relative;
-    color: #666;
+    color: ${props => props.textColor ? props.textColor : '#666'};
     display: block;
-    border: 2px solid #333;
     text-align: center;
     padding: 2.5em 0;
+    border: 2px solid ${props => props.borderColor ? props.borderColor : '#333'};
     border-radius: 0.5em;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease,
+                border-color 0.3s ease;
+
+    ${props => props.mini && css`
+      padding: 1em 0;
+      border-radius: 0.25em;
+    `}
 
     span {
       position: absolute;
-      left: 0;
-      right: 0;
+      left: 50%;
       bottom: -2.5em;
       opacity: 0;
-      transition: all 0.3s ease;
+      transform: translate(-50%,0);
+      transition: bottom 0.3s ease,
+                  opacity 0.3s ease;
     }
 
     &:hover {
-      color: #efefef;
-      border-color: #efefef;
+      color: ${props => props.hoverColor ? props.hoverColor : '#efefef'};
+      border-color: ${props => props.hoverColor ? props.hoverColor : '#efefef'};
 
       span {
         bottom: -2em;
@@ -36,8 +71,14 @@ export const FourfolioContainer = styled.div`
       }
     }
 
-    svg {
+    i {
       font-size: 3em;
+      line-height: 1;
+      margin: 0;
+      
+      ${props => props.mini && css`
+        font-size: 1.5em;
+      `}
     }
   }
 `

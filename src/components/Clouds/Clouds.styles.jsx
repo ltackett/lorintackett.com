@@ -39,7 +39,7 @@ export const Trees = styled.div`
   top: 0;
   left: 50%;
   height: 700px;
-  width: 3000px;
+  width: 2900px;
   background: url(/images/trees.png) no-repeat -200px -200px, linear-gradient(transparent 900px, #000 901px);
   transform: translate(-50%, 0);
 

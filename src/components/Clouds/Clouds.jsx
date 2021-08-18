@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { AppContext } from '../../contexts/appContext'
+import { AppContext } from 'contexts/appContext'
 
 import { CloudsContainer, CloudsCanvas, Trees } from './Clouds.styles'
 
@@ -60,8 +60,6 @@ export const Clouds = (props) => {
     window.addEventListener('resize', resizeClouds)
     return () => window.removeEventListener('resize', resizeClouds)
   }, [])
-  
-  console.log('appContext.isPortraitMode', appContext.isPortraitMode)
 
   // Recursive function that handles animation
   const animateClouds = () => {
