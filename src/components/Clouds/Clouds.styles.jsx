@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { device } from "responsive";
 
 /**
  * CloudsContainer
@@ -6,9 +7,15 @@ import styled, { css } from 'styled-components'
  */
 export const CloudsContainer = styled.div`
   width: 100vw;
-  height: 700px;
   position: relative;
   overflow: hidden;
+
+  height: 400px;
+
+  @media ${device.min.tablet} {
+    height: 700px;
+  }
+
   background: linear-gradient(transparent 700px, #111 1000px),
               radial-gradient(circle at 50% -300px, transparent 300px, #111 1500px),
               radial-gradient(circle at 50% -300px, rgba(255, 255, 255, 0.6), 400px, transparent, 1800px, transparent),
@@ -38,10 +45,15 @@ export const Trees = styled.div`
   position: absolute;
   top: 0;
   left: 50%;
-  height: 700px;
   width: 2900px;
   background: url(/images/trees.png) no-repeat -200px -200px, linear-gradient(transparent 900px, #000 901px);
   transform: translate(-50%, 0);
+  
+  height: 400px;
+
+  @media ${device.min.tablet} {
+    height: 700px;
+  }
 
   &:before, &:after {
     content: '';

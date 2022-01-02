@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+import { device } from "responsive";
+
 
 export const FourfolioContainer = styled.nav`
   width: 700px;
@@ -6,6 +8,18 @@ export const FourfolioContainer = styled.nav`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 2em;
+  
+  ${props => !props.mini && css`
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    padding: 0 1em;
+
+    @media ${device.min.tablet} {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      width: 700px;
+      padding: 0;
+    }
+  `}
 
   ${props => props.align && props.align === 'left' && css`
     margin-left: 0;

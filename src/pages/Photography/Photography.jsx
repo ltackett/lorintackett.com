@@ -1,64 +1,92 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom';
+import PinchZoomPan from "react-image-zoom-pan";
+import { GlobalHotKeys } from 'react-hotkeys';
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
-import { PhotographySharedStyles, PhotographyPageContainer, Header, Columns, LeftColumn, RightColumn } from './Photography.styles'
-import { Fourfolio } from 'components/Fourfolio'
+import { PageContainer } from '../Pages.styles';
+import { FullScreenPhoto, TriptychPhoto } from './Photography.styles';
+import { PhotoGrid } from 'components/PhotoGrid';
+
+import { photos } from './photos';
+
+const categorizedPhotos = {};
+categorizedPhotos['Nightscapes'] = [];
+categorizedPhotos['Nightscape Portraits'] = [];
+categorizedPhotos['Portraits of Trees'] = [];
+categorizedPhotos['Landscapes'] = [];
+categorizedPhotos['Norwegian Island Life'] = [];
+categorizedPhotos['Miniature Mountains Triptych'] = [];
+categorizedPhotos['Redwood Forest Triptych'] = [];
+categorizedPhotos['Tillamook Forest Triptych'] = [];
+
+photos.reverse().forEach((photo) => {
+  photo.categories.forEach((category) => {
+    if (!categorizedPhotos[category]) {
+      categorizedPhotos[category] = []
+    }
+
+    categorizedPhotos[category].push(photo)
+  })
+})
 
 export const Photography = () => {
   return (
+    <PageContainer>
+      <main>
+        <Switch>
+          <Route exact path="/photography">
+            {categorizedPhotos && Object.keys(categorizedPhotos).map(category =>
+              <React.Fragment key={category}>
+                <h2>{category}</h2>
+                <PhotoGrid photos={categorizedPhotos[category]} />
+              </React.Fragment>
+            )}
+          </Route>
+
+          <Route path="/photography/photos/:photoId" component={Photo} />
+
+          <Route path="/photography/triptychs/:triptychId" component={Triptych} />
+        </Switch>
+      </main>
+    </PageContainer>
+  )
+}
+
+const Photo = (props) => {
+  const { params } = useRouteMatch()
+  const photo = props.photo || photos.filter(photo => photo.id === params.photoId)[0]
+
+  const close = () => {
+    window.history.back();
+  }
+
+  return (
+    <GlobalHotKeys keyMap={{ close: 'escape' }} handlers={{ close }}>
+      <FullScreenPhoto src={photo.filename} >
+        <PinchZoomPan position="center">
+          <img src={`/images/photos/${photo.filename}`} alt={photo.title} />
+        </PinchZoomPan>
+        <button id="back-to-photogrid" onClick={() => window.history.back()}>Back</button>
+      </FullScreenPhoto>
+    </GlobalHotKeys>
+  )
+}
+
+const Triptych = (props) => {
+  const { params } = useRouteMatch()
+  const triptychPhotos = photos.filter(photo => photo.triptychId === params.triptychId)
+
+  console.log({ photos, triptychPhotos })
+
+  return (
     <>
-      <PhotographySharedStyles />
-      <PhotographyPageContainer>
-        <Header>
-          <div>
-            <Link to="/">
-              <img src="/images/logo_black2_small.png" alt="" />
-              <span className="visually-hidden">Lorin Tackett</span>
-            </Link>
-          </div>
-          <div>
-            <Fourfolio mini textColor="#777" borderColor="#999" hoverColor="#111" align="right" />
-          </div>
-        </Header>
+      <h2>{triptychPhotos[0].title}</h2>
+      <p>{triptychPhotos[0].description}</p>
+      <PhotoGrid photos={triptychPhotos} ignoreTriptychs />
 
-        <Columns>
-          <LeftColumn>
-            <Link to="/">
-              <img src="/images/logo_black.png" alt="" />
-              <span className="visually-hidden">Lorin Tackett</span>
-            </Link>
-          </LeftColumn>
-
-          <RightColumn>
-            <h1>Photography</h1>
-          </RightColumn>
-
-          <LeftColumn>
-            <ul className="galleries">
-              <li>
-                <Link to="/photography/nightscapes" className="nightscapes">Nightscapes</Link>
-              </li>
-              <li>
-                <Link to="/photography/trees" className="trees">Trees</Link>
-              </li>
-              <li>
-                <Link to="/photography/people" className="people">People</Link>
-              </li>
-              <li>
-                <Link to="/photography/places" className="places">Places</Link>
-              </li>
-            </ul>
-
-          </LeftColumn>
-
-          <RightColumn>
-            <img src="/images/aurora_borealis_mw_panorama.jpg" className="hero" alt="" />
-            <p>My journey as a photographer began when I left a small digital camera in the glove box of a rental car. It wasn't a fancy camera, and I replaced it with an equally unremarkable cheap DSLR.</p>
-            <p>I had no idea what a joy that camera would become to me, and that I would end up taking my first photos of the Milky Way galaxy with it, sparking a passion for photography that would inspire me to travel and explore.</p>
-            <p>Come along and see the world through my lens!</p>
-          </RightColumn>
-        </Columns>
-      </PhotographyPageContainer>
+      {triptychPhotos.map(photo =>
+        <TriptychPhoto src={`/images/photos/thumbnails/${photo.filename}`} alt={photo.title} />
+      )}
     </>
   )
 }
