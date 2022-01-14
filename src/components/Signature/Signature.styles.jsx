@@ -154,12 +154,12 @@ export const Logo = styled.span`
   }
 
   &.run-animation {
-    span.layer-1 { background-image: url('./images/logo/layer1.png'); animation: ${layer1} 2s linear; }
-    span.layer-2 { background-image: url('./images/logo/layer2.png'); animation: ${layer2} 2s linear; }
-    span.layer-3 { background-image: url('./images/logo/layer3.png'); animation: ${layer3} 3s linear; }
-    span.layer-4 { background-image: url('./images/logo/layer4.png'); animation: ${layer4} 3s linear; }
-    span.layer-5 { background-image: url('./images/logo/layer5.png'); animation: ${layer5} 3s linear; }
-    span.layer-6 { background-image: url('./images/logo/layer6.png'); animation: ${layer6} 3s linear; }
+    span.layer-1 { background-image: url('/images/logo/layer1.png'); animation: ${layer1} 2s linear; }
+    span.layer-2 { background-image: url('/images/logo/layer2.png'); animation: ${layer2} 2s linear; }
+    span.layer-3 { background-image: url('/images/logo/layer3.png'); animation: ${layer3} 3s linear; }
+    span.layer-4 { background-image: url('/images/logo/layer4.png'); animation: ${layer4} 3s linear; }
+    span.layer-5 { background-image: url('/images/logo/layer5.png'); animation: ${layer5} 3s linear; }
+    span.layer-6 { background-image: url('/images/logo/layer6.png'); animation: ${layer6} 3s linear; }
   }
   
 
