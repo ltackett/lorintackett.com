@@ -63,9 +63,6 @@ const Photo = (props) => {
   return (
     <GlobalHotKeys keyMap={{ close: 'escape' }} handlers={{ close }}>
       <FullScreenPhoto src={photo.filename} >
-        {/* <PinchZoomPan position="center">
-          <img src={`/images/photos/${photo.filename}`} alt={photo.title} />
-        </PinchZoomPan> */}
         <TransformWrapper centerOnInit centerZoomedOut>
           <TransformComponent wrapperStyle={{
             width: '100vw',
