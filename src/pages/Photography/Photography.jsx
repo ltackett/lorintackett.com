@@ -1,5 +1,5 @@
 import * as React from 'react'
-import PinchZoomPan from "react-image-zoom-pan";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { GlobalHotKeys } from 'react-hotkeys';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
@@ -63,9 +63,17 @@ const Photo = (props) => {
   return (
     <GlobalHotKeys keyMap={{ close: 'escape' }} handlers={{ close }}>
       <FullScreenPhoto src={photo.filename} >
-        <PinchZoomPan position="center">
+        {/* <PinchZoomPan position="center">
           <img src={`/images/photos/${photo.filename}`} alt={photo.title} />
-        </PinchZoomPan>
+        </PinchZoomPan> */}
+        <TransformWrapper centerOnInit centerZoomedOut>
+          <TransformComponent wrapperStyle={{
+            width: '100vw',
+            height: '100vh'
+          }}>
+            <img src={`/images/photos/${photo.filename}`} alt={photo.title} />
+          </TransformComponent>
+        </TransformWrapper>
         <button id="back-to-photogrid" onClick={() => window.history.back()}>Back</button>
       </FullScreenPhoto>
     </GlobalHotKeys>
