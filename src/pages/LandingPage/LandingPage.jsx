@@ -1,30 +1,15 @@
 import * as React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-import { Clouds } from 'components/Clouds'
-import { Signature } from 'components/Signature'
+import { Clouds } from 'components/Clouds';
+import { Signature } from 'components/Signature';
 import { Fourfolio } from 'components/Fourfolio';
-
-const pulse = keyframes`
-  from {
-    opacity: 0.5;
-  }
-
-  to {
-    opacity: 1;
-  }
-`
+import { Loading } from 'components/Loading';
 
 const LandingPageContainer = styled.div`
   min-height: 100vh;
   background: #000;
   color: #efefef;
-`
-
-const Loading = styled.p`
-  text-align: center;
-  padding: 300px 0 0;
-  animation: ${pulse} 0.3s ease-in-out alternate infinite;
 `
 
 const images = [

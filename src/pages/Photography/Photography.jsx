@@ -6,6 +6,7 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import { PageContainer } from '../Pages.styles';
 import { FullScreenPhoto, TriptychPhoto } from './Photography.styles';
 import { PhotoGrid } from 'components/PhotoGrid';
+import { Loading } from 'components/Loading';
 
 import { photos } from './photos';
 
@@ -56,6 +57,17 @@ const Photo = (props) => {
   const { params } = useRouteMatch()
   const photo = props.photo || photos.filter(photo => photo.id === params.photoId)[0]
 
+  const [preloaded, setPreloaded] = React.useState(false);
+
+  React.useEffect(() => {
+    const img = new Image();
+    img.src = `/images/photos/${photo.filename}`;
+    img.onload = () => {
+      setPreloaded(true)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   const close = () => {
     window.history.back();
   }
@@ -63,14 +75,18 @@ const Photo = (props) => {
   return (
     <GlobalHotKeys keyMap={{ close: 'escape' }} handlers={{ close }}>
       <FullScreenPhoto src={photo.filename} >
-        <TransformWrapper centerOnInit centerZoomedOut>
-          <TransformComponent wrapperStyle={{
-            width: '100vw',
-            height: '100vh'
-          }}>
-            <img src={`/images/photos/${photo.filename}`} alt={photo.title} />
-          </TransformComponent>
-        </TransformWrapper>
+        {preloaded ? (
+          <TransformWrapper centerOnInit centerZoomedOut>
+            <TransformComponent wrapperStyle={{
+              width: '100vw',
+              height: '100vh'
+            }}>
+              <img src={`/images/photos/${photo.filename}`} alt={photo.title} />
+            </TransformComponent>
+          </TransformWrapper>
+        ) : (
+          <Loading>Loading...</Loading>
+        )}
         <button id="back-to-photogrid" onClick={() => window.history.back()}>Back</button>
       </FullScreenPhoto>
     </GlobalHotKeys>
